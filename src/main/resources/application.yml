@@ -1,0 +1,16 @@
+security:
+  oauth2:
+    client:
+      registration:
+        keycloak:
+          client-id: my-client
+          client-secret: kkk
+          scope: openid,profile,email
+          authorization-grant-type: authorization_code
+          redirect-uri: "http://localhost:8080/login/oauth2/code/keycloak"
+      provider:
+        keycloak:
+          issuer-uri: http://localhost:7080/realms/MyAppRealm
+spring:
+  application:
+    name=spring-keycloak:
